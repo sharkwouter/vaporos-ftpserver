@@ -1,6 +1,6 @@
 # SteamOS-FTPServer
 
-A simple to use ftp server for SteamOS. It starts and ftp server and displays the address to connect to on screen.
+A simple to use ftp server for SteamOS. It starts and ftp server with a random password and displays how to connect to on screen.
 
 ![](https://github.com/sharkwouter/steamos-ftpserver/raw/master/screenshot.png)
 
