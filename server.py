@@ -14,16 +14,15 @@ class Server:
         self.port = port
         self.username = os.getlogin()
         self.password = self.__generate_password()
-        self.url = "ftp://{}:{}@{}:{}/".format(self.username, self.password, self.ip, self.port)
         self.__setup()
 
     def run(self):
         print("Starting server with address:")
-        print(self.url)
+        print(self.get_url())
         self.server.serve_forever()
 
     def get_url(self):
-        return self.url
+        return "ftp://{}:{}@{}:{}/".format(self.username, self.password, self.ip, self.port)
 
     def __generate_password(self, length=10):
         characters = string.ascii_lowercase
