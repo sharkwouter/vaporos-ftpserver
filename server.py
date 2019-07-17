@@ -41,7 +41,7 @@ class Server:
 
     def __setup(self):
         authorizer = DummyAuthorizer()
-        authorizer.add_user(self.username, self.password, "/home/{}".format(self.username), perm="elradfmw")
+        authorizer.add_user(self.username, self.password, os.environ['HOME'], perm="elradfmw")
 
         handler = FTPHandler
         handler.authorizer = authorizer

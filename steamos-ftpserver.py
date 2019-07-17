@@ -2,6 +2,12 @@
 from server import Server
 from gui import GUI
 import _thread
+import os
+
+# Set the working directory
+abspath = os.path.abspath(__file__)
+dirname = os.path.dirname(abspath)
+os.chdir(dirname)
 
 # Setup the FTP server and gui
 port = 2020
