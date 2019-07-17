@@ -1,41 +1,18 @@
 #!/usr/bin/env python3
-import socket
-import string
-import random
-import os
-from pyftpdlib.authorizers import DummyAuthorizer
-from pyftpdlib.handlers import FTPHandler
-from pyftpdlib.servers import FTPServer
+from server import Server
+from gui import GUI
+import _thread
 
-#Get the IP
-def getIp():
-  s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-  s.connect(("8.8.8.8", 80))
-  ip = s.getsockname()[0]
-  s.close()
-  return ip
-
-#Generate a random password
-def generatePassword(length=10):
-    charList = string.ascii_lowercase
-    password = ""
-    for char in range(length):
-         password+=random.choice(charList)
-    return password
-
-ip = getIp()
-username = os.getlogin()
-password = generatePassword()
+# Setup the FTP server and gui
 port = 2020
+server = Server(2020)
+gui = GUI(server)
 
-connectstring = "ftp://{}:{}@{}:{}/".format(username, password, ip, port)
-print(connectstring)
+# Run the server
+try:
+    _thread.start_new_thread(server.run, ())
+except:
+    print("Error: unable to start server thread")
 
-authorizer = DummyAuthorizer()
-authorizer.add_user(username, password, "/home/{}".format(username), perm="elradfmw")
-
-handler = FTPHandler
-handler.authorizer = authorizer
-
-server = FTPServer((ip, port), handler)
-server.serve_forever()
+# Run the GUI
+gui.run()
