@@ -1,9 +1,7 @@
 [Desktop Entry]
-Version=1.0
 Name=VaporOS-FTPServer
 GenericName=FTP Server
-Type=Application
 Exec=vaporos-ftpserver
 Icon=vaporos-ftpserver
+Type=Application
 Categories=Utility;
-Name[en_US]=VaporOS-FTPServer
