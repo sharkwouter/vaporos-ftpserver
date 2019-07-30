@@ -3,3 +3,6 @@ __pycache__/
 .idea/
 *.swp
 *.pyc
+debian/vaportransport*
+debian/files
+debian/debhelper-build-stamp

@@ -1,4 +1,4 @@
 vaportransport /usr/bin
-src/__init__.py /usr/lib/python2.7/dist-packages/vaportransport
-src/server.py /usr/lib/python2.7/dist-packages/vaportransport
-src/gui.py /usr/lib/python2.7/dist-packages/vaportransport
+vaporos_vaportransport/__init__.py /usr/lib/python2.7/dist-packages/vaporos_vaportransport
+vaporos_vaportransport/server.py /usr/lib/python2.7/dist-packages/vaporos_vaportransport
+vaporos_vaportransport/gui.py /usr/lib/python2.7/dist-packages/vaporos_vaportransport

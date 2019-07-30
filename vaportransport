@@ -2,7 +2,7 @@
 import thread, os
 
 if __name__ == "__main__":
-  from vaportransport import GUI, Server
+  from vaporos_vaportransport import GUI, Server
   # Setup the FTP server and gui
   port = 2020
   server = Server(port)

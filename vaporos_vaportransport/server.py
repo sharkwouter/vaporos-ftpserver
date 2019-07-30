@@ -1,7 +1,4 @@
-import socket
-import string
-import random
-import os, sys
+import socket, string, random, os, sys
 from pyftpdlib.authorizers import DummyAuthorizer
 from pyftpdlib.handlers import FTPHandler
 from pyftpdlib.servers import FTPServer
@@ -25,8 +22,7 @@ class Server:
     def stop(self):
         print("Stopping server")
         self.server.close_all()
-        sys.exit()
-        print("Done")
+        print("Server stopped")
 
     def get_url(self):
         return "ftp://{}:{}@{}:{}/".format(self.username, self.password, self.ip, self.port)
@@ -40,8 +36,11 @@ class Server:
 
     def __get_ip(self):
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        s.connect(("steampowered.com", 80))
-        ip = s.getsockname()[0]
+        try:
+            s.connect(("10.255.255.255", 1))
+            ip = s.getsockname()[0]
+        except (socket.gaierror, socket.error):
+            ip = "0.0.0.0"
         s.close()
         return ip
 

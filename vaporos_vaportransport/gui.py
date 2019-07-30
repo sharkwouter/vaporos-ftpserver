@@ -65,7 +65,7 @@ class GUI:
         pygame.init()
 
         self.screen = pygame.display.set_mode((display_width, display_height))
-        pygame.display.set_caption("steamos-ftpserver")
+        pygame.display.set_caption("vaportransport: transfer files easily")
 
         self.clock = pygame.time.Clock()
 
