@@ -4,3 +4,4 @@ vaporos_ftpserver/server.py /usr/lib/python2.7/dist-packages/vaporos_ftpserver
 vaporos_ftpserver/gui.py /usr/lib/python2.7/dist-packages/vaporos_ftpserver
 icons/vaporos-ftpserver.desktop /usr/share/applications
 icons/vaporos-ftpserver.svg /usr/share/pixmaps
+icons/vaporos-ftpserver.png /usr/share/pixmaps
