@@ -1,4 +1,6 @@
-vaportransport /usr/bin
-vaporos_vaportransport/__init__.py /usr/lib/python2.7/dist-packages/vaporos_vaportransport
-vaporos_vaportransport/server.py /usr/lib/python2.7/dist-packages/vaporos_vaportransport
-vaporos_vaportransport/gui.py /usr/lib/python2.7/dist-packages/vaporos_vaportransport
+vaporos-ftpserver /usr/bin
+vaporos_ftpserver/__init__.py /usr/lib/python2.7/dist-packages/vaporos_ftpserver
+vaporos_ftpserver/server.py /usr/lib/python2.7/dist-packages/vaporos_ftpserver
+vaporos_ftpserver/gui.py /usr/lib/python2.7/dist-packages/vaporos_ftpserver
+icons/vaporos-ftpserver.desktop /usr/share/applications
+icons/vaporos-ftpserver.svg /usr/share/pixmaps

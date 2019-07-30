@@ -1,11 +1,11 @@
-Source: vaportransport
+Source: vaporos-ftpserver
 Section: utils
 Priority: optional
 Maintainer: Wouter Wijsman <wwijsman@live.nl>
 Build-Depends: debhelper (>= 9)
 Standards-Version: 3.9.6
 
-Package: vaportransport
+Package: vaporos-ftpserver
 Architecture: all
 Depends: python, fonts-dejavu-core, python-pygame, python-pyftpdlib
 Suggests:

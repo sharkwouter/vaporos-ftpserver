@@ -1,5 +1,5 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: vaportransport
+Upstream-Name: vaporos-ftpserver
 Source: vaporos.net
 
 Files: *

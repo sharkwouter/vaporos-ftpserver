@@ -1,4 +1,4 @@
-# Vaportransport
+# VaporOS-FTPServer
 
 A simple to use ftp server for VaporOS. It starts and ftp server with a random password and displays how to connect to on screen.
 
@@ -13,7 +13,9 @@ Install the following packages:
 - python-pyftpdlib
 - fonts-dejavu-core
 
-The application can be started by starting the ``vaportransport.py`` script.
+The application can be started by running: 
+
+``./vaporos-ftpserver``
 
 ## Installation with venv
 
@@ -30,13 +32,15 @@ This program can be installed by performing the following steps on the commandli
 - ``source venv/bin/activate``
 - ``pip install -r requirements.txt``
 
-Now the application can be started with ``./vaportransport.py``
+Now the application can be started with:
+ 
+ ``./vaporos-ftpserver``
 
 Starting the application again in the future will require the following commands:
 
 - ``cd steamos-ftpserver``
 - ``source venv/bin/activate``
-- ``./vaportransport.py``
+- ``./vaporos-ftpserver``
 
 ## Future plans
 
