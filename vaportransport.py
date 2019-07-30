@@ -1,7 +1,6 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 from vaportransport import GUI, Server
-import _thread
-import os
+import thread, os
 
 # Set the working directory
 file_name = os.path.realpath(__file__)
@@ -15,7 +14,7 @@ gui = GUI(server)
 
 # Run the server
 try:
-    _thread.start_new_thread(server.run, ())
+    thread.start_new_thread(server.run, ())
 except:
     print("Error: unable to start server thread")
 
