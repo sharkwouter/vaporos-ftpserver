@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-from server import Server
-from gui import GUI
+from vaportransport import GUI, Server
 import _thread
 import os
 
@@ -11,7 +10,7 @@ os.chdir(directory_name)
 
 # Setup the FTP server and gui
 port = 2020
-server = Server(2020)
+server = Server(port)
 gui = GUI(server)
 
 # Run the server

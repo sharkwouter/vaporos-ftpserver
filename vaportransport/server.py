@@ -1,7 +1,7 @@
 import socket
 import string
 import random
-import os
+import os, sys
 from pyftpdlib.authorizers import DummyAuthorizer
 from pyftpdlib.handlers import FTPHandler
 from pyftpdlib.servers import FTPServer
@@ -20,6 +20,13 @@ class Server:
         print("Starting server with address:")
         print(self.get_url())
         self.server.serve_forever()
+        print("Server stopped")
+
+    def stop(self):
+        print("Stopping server")
+        self.server.close_all()
+        sys.exit()
+        print("Done")
 
     def get_url(self):
         return "ftp://{}:{}@{}:{}/".format(self.username, self.password, self.ip, self.port)
