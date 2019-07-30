@@ -8,10 +8,10 @@ A simple to use ftp server for SteamOS. It starts and ftp server with a random p
 
 Install the following packages:
 
-- python3
-- python3-pygame
-- python3-pyftpdlib
-- git
+- python
+- python-pygame
+- python-pyftpdlib
+- fonts-dejavu
 
 The application can be started by starting the ``steamos-ftpserver.py`` script.
 
