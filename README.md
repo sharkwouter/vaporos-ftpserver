@@ -11,7 +11,7 @@ Install the following packages:
 - python
 - python-pygame
 - python-pyftpdlib
-- fonts-dejavu
+- fonts-dejavu-core
 
 The application can be started by starting the ``vaportransport.py`` script.
 
@@ -30,13 +30,13 @@ This program can be installed by performing the following steps on the commandli
 - ``source venv/bin/activate``
 - ``pip install -r requirements.txt``
 
-Now the application can be started with ``./steamos-ftpserver.py``
+Now the application can be started with ``./vaportransport.py``
 
 Starting the application again in the future will require the following commands:
 
 - ``cd steamos-ftpserver``
 - ``source venv/bin/activate``
-- ``./steamos-ftpserver.py``
+- ``./vaportransport.py``
 
 ## Future plans
 
