@@ -1,3 +1,4 @@
-vaportransport.py /usr/bin/vaportransport
-vaportransport/server.py /usr/lib/python2.7/dist-packages/vaportransport
-vaportransport/gui.py /usr/lib/python2.7/dist-packages/vaportransport
+vaportransport /usr/bin
+src/__init__.py /usr/lib/python2.7/dist-packages/vaportransport
+src/server.py /usr/lib/python2.7/dist-packages/vaportransport
+src/gui.py /usr/lib/python2.7/dist-packages/vaportransport

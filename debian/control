@@ -7,6 +7,6 @@ Standards-Version: 3.9.6
 
 Package: vaportransport
 Architecture: all
-Depends: ${python:Depends}, ${fonts-dejavu-core:Depends}, ${python-pygame:Depends}, ${python-pyftpdlib:Depends}, ${misc:Depends}
+Depends: python, fonts-dejavu-core, python-pygame, python-pyftpdlib
 Suggests:
 Description: Open a file sharing server with a simple interface
