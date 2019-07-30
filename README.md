@@ -1,6 +1,6 @@
-# SteamOS-FTPServer
+# Vaportransport
 
-A simple to use ftp server for SteamOS. It starts and ftp server with a random password and displays how to connect to on screen.
+A simple to use ftp server for VaporOS. It starts and ftp server with a random password and displays how to connect to on screen.
 
 ![](https://github.com/sharkwouter/steamos-ftpserver/raw/master/screenshot.png)
 
@@ -13,7 +13,7 @@ Install the following packages:
 - python-pyftpdlib
 - fonts-dejavu
 
-The application can be started by starting the ``steamos-ftpserver.py`` script.
+The application can be started by starting the ``vaportransport.py`` script.
 
 ## Installation with venv
 
