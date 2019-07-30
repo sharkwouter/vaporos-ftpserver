@@ -1,4 +1,5 @@
 import pygame
+import os.path
 
 
 display_width = 1280
@@ -7,8 +8,14 @@ display_height = 720
 black = (0, 0, 0)
 white = (255, 255, 255)
 
-font_regular = "fonts/DejaVuSansMono.ttf"
-font_bold = "fonts/DejaVuSansMono-Bold.ttf"
+font_regular = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
+font_bold = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf"
+
+if not os.path.isfile(font_regular):
+    font_regular = "fonts/DejaVuSansMono.ttf"
+
+if not os.path.isfile(font_bold):
+    font_bold = "fonts/DejaVuSansMono-Bold.ttf"
 
 
 class GUI:
