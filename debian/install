@@ -1,0 +1,3 @@
+vaportransport.py /usr/bin/vaportransport
+vaportransport/server.py /usr/lib/python2.7/dist-packages/vaportransport
+vaportransport/gui.py /usr/lib/python2.7/dist-packages/vaportransport
