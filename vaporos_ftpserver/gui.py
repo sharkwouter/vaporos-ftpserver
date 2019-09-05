@@ -18,6 +18,20 @@ if not os.path.isfile(font_bold):
     font_bold = "fonts/DejaVuSansMono-Bold.ttf"
 
 
+class Button():
+    A = 0
+    B = 1
+    X = 2
+    Y = 3
+    LB = 4
+    RB = 5
+    SEL = 6
+    START = 7
+    HOME = 8
+    LTHUMB = 9
+    RTHUMB = 10
+
+
 class GUI:
 
     def __init__(self, server):
@@ -37,6 +51,8 @@ class GUI:
             self.__display_text(self.url, (display_width/2), (display_height/2), 48, font=font_bold)
             self.__display_text("Open this in your file browser",
                                 (display_width / 2), (display_height / 2 + 48), 32, font=font_regular)
+            self.__display_text("Press start to exit",
+                                (display_width / 2), (display_height - 64), 32, font=font_regular)
             self.__update()
 
         self.__quit()
@@ -47,6 +63,9 @@ class GUI:
                 self.quit = True
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_ESCAPE:
+                    self.quit = True
+            elif event.type == pygame.JOYBUTTONDOWN:
+                if event.button == Button.SEL or event.button == Button.START:
                     self.quit = True
 
     def __display_text(self, text, x, y, size, text_color=white, font=font_regular):
@@ -66,6 +85,11 @@ class GUI:
 
         self.screen = pygame.display.set_mode((display_width, display_height))
         pygame.display.set_caption("vaportransport: transfer files easily")
+
+        pygame.joystick.init()
+        joysticks = [pygame.joystick.Joystick(x) for x in range(pygame.joystick.get_count())]
+        for joystick in joysticks:
+            joystick.init()
 
         self.clock = pygame.time.Clock()
 
